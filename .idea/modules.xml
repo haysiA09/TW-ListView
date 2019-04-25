@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/DemoListViewCollab.iml" filepath="$PROJECT_DIR$/DemoListViewCollab.iml" />
       <module fileurl="file://$PROJECT_DIR$/TW-ListView.iml" filepath="$PROJECT_DIR$/TW-ListView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TW-ListView.iml" filepath="$PROJECT_DIR$/TW-ListView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
