@@ -29,13 +29,72 @@ public class SecondActivity extends AppCompatActivity {
         tvYear = (TextView) findViewById(R.id.tvYear);
 
         Intent i = getIntent();
-        String year = i.getStringExtra("year");
+        String year = i.getStringExtra("selectYear");
         tvYear.setText(year);
 
         module = new ArrayList<Module>();
-        module.add(new Module("C208", true));
+
+        if (year.equals("Year 1")) {
+            module.add(new Module("C208", true));
+            module.add(new Module("B216", false));
+            module.add(new Module("C105", true));
+
+            aa = new ModuleAdapter(this, R.layout.row_second, module);
+            lv.setAdapter(aa);
+
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Module selectedModule = module.get(position);
+
+                    Toast.makeText(SecondActivity.this, selectedModule.getCode()
+                                    + " Programming: " + selectedModule.isProg(),
+                            Toast.LENGTH_LONG).show();
+                }
+            });
+        } else if (year.equals("Year 2")) {
+            module.add(new Module("T202", false));
+            module.add(new Module("C346", true));
+            module.add(new Module("C348", true));
+
+            aa = new ModuleAdapter(this, R.layout.row_second, module);
+            lv.setAdapter(aa);
+
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Module selectedModule = module.get(position);
+
+                    Toast.makeText(SecondActivity.this, selectedModule.getCode()
+                                    + " Programming: " + selectedModule.isProg(),
+                            Toast.LENGTH_LONG).show();
+                }
+            });
+        } else {
+            module.add(new Module("C349", true));
+            module.add(new Module("C347", true));
+            module.add(new Module("C308", true));
+
+            aa = new ModuleAdapter(this, R.layout.row_second, module);
+            lv.setAdapter(aa);
+
+            lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Module selectedModule = module.get(position);
+
+                    Toast.makeText(SecondActivity.this, selectedModule.getCode()
+                                    + " Programming: " + selectedModule.isProg(),
+                            Toast.LENGTH_LONG).show();
+                }
+            });
+        }
+/*        module.add(new Module("C208", true));
         module.add(new Module("B216", false));
-        module.add(new Module("C348", true));
+        module.add(new Module("C105", true));
 
         aa = new ModuleAdapter(this, R.layout.row_second, module);
         lv.setAdapter(aa);
@@ -50,7 +109,7 @@ public class SecondActivity extends AppCompatActivity {
                                 + " Programing: " + selectedModule.isProg(),
                         Toast.LENGTH_LONG).show();
             }
-        });
+        });*/
     }
 
 
